@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "b387c333-b97d-4565-9f3f-11f9977d1dd3",
+		"name": "Dev MLAB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Access Token",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"type": "default"
+					},
+					{
+						"key": "Cookie",
+						"value": "refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI3OWNlMWVmZC01MWEyLTRkNDAtOWQzYS0xODI1ZmE3MDFiODcifQ.eyJleHAiOjE2OTA4Nzg4MDgsImlhdCI6MTY5MDg3NzAwOCwianRpIjoiNWYyMjFjOTAtMzVlZi00ZTU3LWE0YmUtYTc4NjZjNDJlNmM3IiwiaXNzIjoiaHR0cHM6Ly9xYS1hYWEuYm9zY2hpbmRpYS1tb2JpbGl0eXNvbHV0aW9ucy5jb20vYXV0aC9yZWFsbXMvUmxtX1JPQk9JTl9Nb2JpbGl0eUxhYl9JTiIsImF1ZCI6Imh0dHBzOi8vcWEtYWFhLmJvc2NoaW5kaWEtbW9iaWxpdHlzb2x1dGlvbnMuY29tL2F1dGgvcmVhbG1zL1JsbV9ST0JPSU5fTW9iaWxpdHlMYWJfSU4iLCJzdWIiOiI3NTk1MjBjMC1jYTU1LTQ1NWYtOWU0Zi1iMWNjNmU5YzU5NzgiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoicG9ydGFsLWFwcCIsInNlc3Npb25fc3RhdGUiOiJjOTlhZjM3YS1mN2NiLTQzZWQtYmJlMi03MTAxMmFmNWUwYmIiLCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIn0.Pk_ZBYMGcP32pXe-WT5kKCwoTukXPzP2vR_2pXw2kWc",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://k8s-default-mlabsing-e1403d8ec0-566583979.ap-south-1.elb.amazonaws.com/user-mgmt/api/v1/auth/token",
+					"protocol": "http",
+					"host": [
+						"k8s-default-mlabsing-e1403d8ec0-566583979",
+						"ap-south-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"user-mgmt",
+						"api",
+						"v1",
+						"auth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "Applica",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"requestToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI3OWNlMWVmZC01MWEyLTRkNDAtOWQzYS0xODI1ZmE3MDFiODcifQ.eyJleHAiOjE2ODk5MjE2NjUsImlhdCI6MTY4OTkxOTg2NSwianRpIjoiYzU3NmY4NWYtMTE5YS00N2M3LTk3OGMtYTIyNTI1NjQzYzc5IiwiaXNzIjoiaHR0cHM6Ly9xYS1hYWEuYm9zY2hpbmRpYS1tb2JpbGl0eXNvbHV0aW9ucy5jb20vYXV0aC9yZWFsbXMvUmxtX1JPQk9JTl9Nb2JpbGl0eUxhYl9JTiIsImF1ZCI6Imh0dHBzOi8vcWEtYWFhLmJvc2NoaW5kaWEtbW9iaWxpdHlzb2x1dGlvbnMuY29tL2F1dGgvcmVhbG1zL1JsbV9ST0JPSU5fTW9iaWxpdHlMYWJfSU4iLCJzdWIiOiI3NTk1MjBjMC1jYTU1LTQ1NWYtOWU0Zi1iMWNjNmU5YzU5NzgiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoicG9ydGFsLWFwcCIsInNlc3Npb25fc3RhdGUiOiJlOTdkNDdjMi1mZjZmLTQyZWItODE3Mi1mZTBkNjRlZjA2ZWQiLCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIn0.XS6csYcmDM3AQt5_YuZcYQ2-En-z8OkGr1TLEdxojdA\"\r\n}"
+				},
+				"url": {
+					"raw": "http://k8s-default-mlabsing-e1403d8ec0-566583979.ap-south-1.elb.amazonaws.com/user-mgmt/api/v1/auth/logout",
+					"protocol": "http",
+					"host": [
+						"k8s-default-mlabsing-e1403d8ec0-566583979",
+						"ap-south-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"user-mgmt",
+						"api",
+						"v1",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJNUDd1dzRKak5yeEh2NjdzU1VMVUs3dzF0THVkb3ViWFZNTUJlT0t6X1JVIn0.eyJleHAiOjE2OTA4NzgxMDYsImlhdCI6MTY5MDg3NzIwNiwianRpIjoiNDA3Y2MzNzgtYTUwYy00NWZjLTkzNGQtYzU5MjMzNGQ1MGFkIiwiaXNzIjoiaHR0cHM6Ly9xYS1hYWEuYm9zY2hpbmRpYS1tb2JpbGl0eXNvbHV0aW9ucy5jb20vYXV0aC9yZWFsbXMvUmxtX1JPQk9JTl9Nb2JpbGl0eUxhYl9JTiIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI3NTk1MjBjMC1jYTU1LTQ1NWYtOWU0Zi1iMWNjNmU5YzU5NzgiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwb3J0YWwtYXBwIiwic2Vzc2lvbl9zdGF0ZSI6IjViODhiNzk5LTJkY2QtNDU4ZC04MjYwLTMyY2E5MzBhYzkxNCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtcmxtX3JvYm9pbl9tb2JpbGl0eWxhYl9pbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IlN1cmFqIEt1cnJld2FyIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic3VyYWpiYWJ1cmFvLmt1cnJlQGhjbC5jb20iLCJnaXZlbl9uYW1lIjoiU3VyYWoiLCJmYW1pbHlfbmFtZSI6Ikt1cnJld2FyIiwiZW1haWwiOiJzdXJhamJhYnVyYW8ua3VycmVAaGNsLmNvbSJ9.asXxfKCX9QxhF8gfgN9o9WJKiXwBbCZJbnO5_BhdeEL1BY3lpjDUqbN1ubIEkCDGPu6at9An6zfVCxlH-ORV8r_zlUZ5CKXDbERPRN8sbB2okWsPf3otWUHF6alXIQNg3bhI6kACwGWdHXBSsJoaL4j9V0W-NbABacy0fC21zquiSZKDtbUS2cb5oxWZ53D5DQuMAs2i2KGrCXzBVT-2nEYQ1Bo6tMENnbyc4IxpN4dzZ5OBt74uh36FHUdqeUq4OLMr5x-4V4Pnj7HIUUg8AH0cr78kBFCMcD6hWWdOgCecJib0_iyOXh16t1VZSXZ0JYILq0EYR_NyP807EK7dmA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"type": "default"
+					},
+					{
+						"key": "accesskey",
+						"value": "+TPXWIOuzJXQ5PCxY/BAquaoV3VkKcID4kPwQ/NVG6hXGsPraxisbBMxC7vB9bXXxGpzgxgzzrSJ9g7mjo/l0ytMM1PCZgJ1KKSRuFikR1dp19H3PFjxshmN8hTBztVoQyc0G5ND5I+9K9voWh7CMAnomFhX+jvd3zw8ecIo8kh2KLJGh5dpfGyp1ZnF4PGTbG+1z5AFVYxY8hnlvG/NQQ==",
+						"type": "default"
+					},
+					{
+						"key": "requestor",
+						"value": "3f2a7206-2737-456c-bca4-4f7f8a7de56f",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"\",\r\n    \"password\":\"Password@123\",\r\n    \"newPassword\":\"Password@1234\"\r\n}"
+				},
+				"url": {
+					"raw": "http://k8s-default-mlabsing-e1403d8ec0-566583979.ap-south-1.elb.amazonaws.com/user-mgmt/api/v1/users/changePassword",
+					"protocol": "http",
+					"host": [
+						"k8s-default-mlabsing-e1403d8ec0-566583979",
+						"ap-south-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"user-mgmt",
+						"api",
+						"v1",
+						"users",
+						"changePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forget Password",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJNUDd1dzRKak5yeEh2NjdzU1VMVUs3dzF0THVkb3ViWFZNTUJlT0t6X1JVIn0.eyJleHAiOjE2OTA4NzgxMDYsImlhdCI6MTY5MDg3NzIwNiwianRpIjoiNDA3Y2MzNzgtYTUwYy00NWZjLTkzNGQtYzU5MjMzNGQ1MGFkIiwiaXNzIjoiaHR0cHM6Ly9xYS1hYWEuYm9zY2hpbmRpYS1tb2JpbGl0eXNvbHV0aW9ucy5jb20vYXV0aC9yZWFsbXMvUmxtX1JPQk9JTl9Nb2JpbGl0eUxhYl9JTiIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI3NTk1MjBjMC1jYTU1LTQ1NWYtOWU0Zi1iMWNjNmU5YzU5NzgiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwb3J0YWwtYXBwIiwic2Vzc2lvbl9zdGF0ZSI6IjViODhiNzk5LTJkY2QtNDU4ZC04MjYwLTMyY2E5MzBhYzkxNCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtcmxtX3JvYm9pbl9tb2JpbGl0eWxhYl9pbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IlN1cmFqIEt1cnJld2FyIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic3VyYWpiYWJ1cmFvLmt1cnJlQGhjbC5jb20iLCJnaXZlbl9uYW1lIjoiU3VyYWoiLCJmYW1pbHlfbmFtZSI6Ikt1cnJld2FyIiwiZW1haWwiOiJzdXJhamJhYnVyYW8ua3VycmVAaGNsLmNvbSJ9.asXxfKCX9QxhF8gfgN9o9WJKiXwBbCZJbnO5_BhdeEL1BY3lpjDUqbN1ubIEkCDGPu6at9An6zfVCxlH-ORV8r_zlUZ5CKXDbERPRN8sbB2okWsPf3otWUHF6alXIQNg3bhI6kACwGWdHXBSsJoaL4j9V0W-NbABacy0fC21zquiSZKDtbUS2cb5oxWZ53D5DQuMAs2i2KGrCXzBVT-2nEYQ1Bo6tMENnbyc4IxpN4dzZ5OBt74uh36FHUdqeUq4OLMr5x-4V4Pnj7HIUUg8AH0cr78kBFCMcD6hWWdOgCecJib0_iyOXh16t1VZSXZ0JYILq0EYR_NyP807EK7dmA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "Applica",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailId\":\"\"\r\n}"
+				},
+				"url": {
+					"raw": "http://k8s-default-mlabsing-e1403d8ec0-566583979.ap-south-1.elb.amazonaws.com/user-mgmt/api/v1/users/forgetPassword",
+					"protocol": "http",
+					"host": [
+						"k8s-default-mlabsing-e1403d8ec0-566583979",
+						"ap-south-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"user-mgmt",
+						"api",
+						"v1",
+						"users",
+						"forgetPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEV Upload Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJNUDd1dzRKak5yeEh2NjdzU1VMVUs3dzF0THVkb3ViWFZNTUJlT0t6X1JVIn0.eyJleHAiOjE2OTA4NzY3MzEsImlhdCI6MTY5MDg3NTgzMSwianRpIjoiMWNlOGE4NjUtMDlhMS00YzY1LWE0ODctOWM3NDFiZGE5NWViIiwiaXNzIjoiaHR0cHM6Ly9xYS1hYWEuYm9zY2hpbmRpYS1tb2JpbGl0eXNvbHV0aW9ucy5jb20vYXV0aC9yZWFsbXMvUmxtX1JPQk9JTl9Nb2JpbGl0eUxhYl9JTiIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI3NTk1MjBjMC1jYTU1LTQ1NWYtOWU0Zi1iMWNjNmU5YzU5NzgiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJwb3J0YWwtYXBwIiwic2Vzc2lvbl9zdGF0ZSI6IjY2MGJlMjI3LTI0MTgtNGZjZS1iNDU2LTJlMWE5YWRkOTUxOSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtcmxtX3JvYm9pbl9tb2JpbGl0eWxhYl9pbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IlN1cmFqIEt1cnJld2FyIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic3VyYWpiYWJ1cmFvLmt1cnJlQGhjbC5jb20iLCJnaXZlbl9uYW1lIjoiU3VyYWoiLCJmYW1pbHlfbmFtZSI6Ikt1cnJld2FyIiwiZW1haWwiOiJzdXJhamJhYnVyYW8ua3VycmVAaGNsLmNvbSJ9.A-2D8U3QuTj3jS7I5dV-UC7C4kAbTXy5EhcDYdtPBoBg0_1siU-Njyq50Hik1GudAagXh1DYBgHBwrdFz8j2qru0rKjqraSYKh1FO84ClIjYj2FyptdUYkANRV-sekRhIaJCaJoiwYqGUsG5NHA1B3uOoj0KQCwVSRcpD4nu6lF8OqRvA3ugVkfnA335GsauzIM6Yjh6OJG7y6kjtb5bV1sLXAoFtkEIhf6TYTxcewTXhajYfOviU4Di61wFsK-SWfKgcMTX7f-xfcJMAVKIdIs_5Mj6pBLOqOwvvxqPYjQVCh5azDVqs2V2oQgmDUVVcShQV_P9cLwVZBChbCURfw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "type",
+						"value": "Member",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/surajbaburao.kurre/Downloads/User.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://k8s-default-mlabsing-e1403d8ec0-566583979.ap-south-1.elb.amazonaws.com/user-mgmt/api/v1/upload/users",
+					"protocol": "http",
+					"host": [
+						"k8s-default-mlabsing-e1403d8ec0-566583979",
+						"ap-south-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"user-mgmt",
+						"api",
+						"v1",
+						"upload",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dev Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.api+json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"surajbaburao.kurre@hcl.com\",\r\n    \"password\":\"Password@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://k8s-default-mlabsing-e1403d8ec0-566583979.ap-south-1.elb.amazonaws.com/user-mgmt/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"k8s-default-mlabsing-e1403d8ec0-566583979",
+						"ap-south-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"user-mgmt",
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
